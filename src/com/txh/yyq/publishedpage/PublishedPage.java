@@ -5,7 +5,7 @@ import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 /**
- * 揭晓页面（属性）
+ * 定义[揭晓]页面常用字段
  * 
  * @author xiaohua
  * 
@@ -22,6 +22,7 @@ public class PublishedPage extends UiAutomatorTestCase {
 	public static UiObject awardName = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_award_item_tv_name"));
+	//获奖者信息
 	public static UiObject awardMessage = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_award_item_rl_do_open"));
@@ -50,8 +51,6 @@ public class PublishedPage extends UiAutomatorTestCase {
 	public static UiObject luckyTime = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_award_tv_realtime"));
-	// 获奖者个人中心属性
-	public static UiObject otherIcon = new UiObject(
-			new UiSelector().resourceId("com.mappn.gfan:id/other_iv_icon"));
+	
 
 }

@@ -5,6 +5,7 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 import com.txh.amarket.homepage.HomePage;
 import com.txh.uiautomatorhelper.UiAutomatorHelper;
 import com.txh.yyq.gooddetails.GoodDetails;
+import com.txh.yyq.other.personcenter.OtherPersonCenter;
 import com.txh.yyq.publishedpage.PublishedPage;
 import com.txh.yyq.scrollable.Vertical;
 
@@ -62,7 +63,7 @@ public class PublishedPageTestCase extends UiAutomatorTestCase {
 		HomePage.backBtn.click();
 		// 点击获奖信息进入获奖者个人中心
 		PublishedPage.awardMessage.clickAndWaitForNewWindow();
-		assertEquals("个人中心icon是否存在", true, PublishedPage.otherIcon.exists());
+		assertEquals("个人中心icon是否存在", true, OtherPersonCenter.otherIcon.exists());
 		HomePage.backBtn.click();
 
 	}

@@ -5,7 +5,7 @@ import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 /**
- * 未登录页面（属性）
+ * 定义[未登录]页面常用字段
  * 
  * @author xiaohua
  * 

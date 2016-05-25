@@ -5,7 +5,7 @@ import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 /**
- * 清单页面（属性）
+ * 定义[清单]页面常用字段
  * 
  * @author xiaohua
  * 

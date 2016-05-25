@@ -3,7 +3,11 @@ package com.txh.yyq.my;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
-
+/**
+ * 定义[我的]页面常用字段
+ * @author xiaohua
+ *
+ */
 public class MyPage extends UiAutomatorTestCase {
 	public static UiObject loggedIcon = new UiObject(
 			new UiSelector().resourceId("com.mappn.gfan:id/logged_iv_icon"));

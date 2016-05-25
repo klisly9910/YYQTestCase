@@ -3,7 +3,11 @@ package com.txh.yyq.personcenter;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
-
+/**
+ * 定义[我的]-点击头像进入[个人中心页面]
+ * @author xiaohua
+ *
+ */
 public class PersonCenter extends UiAutomatorTestCase {
 	public static UiObject usernamelayout = new UiObject(
 			new UiSelector()
