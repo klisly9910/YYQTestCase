@@ -20,7 +20,7 @@ public class SignQQ extends UiAutomatorTestCase {
 
 	}
 
-	public void testCase() throws UiObjectNotFoundException {
+	public static void testCase() throws UiObjectNotFoundException {
 		UnSignPage.loginQQ.clickAndWaitForNewWindow();
 		UnSignPage.btnOk.clickAndWaitForNewWindow(2000);
 		assertEquals("登录成功", true, MyPage.loggedName.exists());
