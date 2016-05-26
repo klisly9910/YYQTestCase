@@ -1,9 +1,12 @@
 package com.txh.amarket.testcase;
 
+
 import com.android.uiautomator.core.UiObjectNotFoundException;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 import com.txh.amarket.homepage.HomePage;
 import com.txh.uiautomatorhelper.UiAutomatorHelper;
+import com.txh.yyq.sign.SignImapp;
+import com.txh.yyq.unsignpage.UnSignPage;
 
 /**
  * 首页一元抢（方法） 测试点击/判断属性是否存在
@@ -52,6 +55,14 @@ public class HomePageyyqTestCase extends UiAutomatorTestCase {
 		assertEquals(true, HomePage.homeyyqBuy.exists());
 		System.out.println("加入清单Buy存在!");
 		HomePage.homeyyqBuy.click();
+		//使用机锋账号登录，登录后返回应用商店首页，再次点击加入清单
+		if(UnSignPage.signBtn.exists()){
+			SignImapp.testCase();
+			System.out.println("使用机锋账号登录成功！！");
+			HomePage.homeyyqBuy.click();
+		}
+		
+		
 
 	}
 

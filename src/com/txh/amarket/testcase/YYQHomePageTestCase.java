@@ -6,12 +6,14 @@ import com.txh.amarket.homepage.HomePage;
 import com.txh.uiautomatorhelper.UiAutomatorHelper;
 import com.txh.yyq.gooddetails.GoodDetails;
 import com.txh.yyq.scrollable.Vertical;
+import com.txh.yyq.sign.SignWeiChat;
+import com.txh.yyq.unsignpage.UnSignPage;
 
-public class YYQHomePageTestCase extends UiAutomatorTestCase{
+public class YYQHomePageTestCase extends UiAutomatorTestCase {
 
 	/**
-	 * 一元抢首页（方法） 测试点击/判断属性是否存在
-	 * 测试垂直滚动
+	 * 一元抢首页（方法） 测试点击/判断属性是否存在 测试垂直滚动
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -22,7 +24,10 @@ public class YYQHomePageTestCase extends UiAutomatorTestCase{
 		new UiAutomatorHelper(jarName, testClass, testName, androidId);
 
 	}
-	public void testCase()throws UiObjectNotFoundException{
+
+	public void testCase() throws UiObjectNotFoundException {
+		// 进入一元抢首页
+		HomePage.fourthNav.clickAndWaitForNewWindow();
 		Vertical.scrollVertical.setAsVerticalList();
 		Vertical.scrollVertical.flingForward();
 		Vertical.scrollVertical.flingForward();
@@ -43,10 +48,17 @@ public class YYQHomePageTestCase extends UiAutomatorTestCase{
 		assertEquals(true, HomePage.homeyyqBuy.exists());
 		System.out.println("加入清单Buy存在!");
 		HomePage.homeyyqBuy.click();
-		HomePage.backBtn.click();
+		// 使用微信登录，登录后返回应用商店首页，再次点击加入清单
+		if (UnSignPage.signBtn.exists()) {
+			SignWeiChat.testCase();
+			System.out.println("使用微信登录成功！！");
+			HomePage.homeyyqBuy.click();
+			assertEquals("一元抢", true, HomePage.yyqText.exists());
+		}
 		HomePage.homeyyqIcon.click();
 		assertEquals(true, GoodDetails.productDetailText.exists());
 		HomePage.backBtn.click();
+		HomePage.backBtn.click();//返回应用商店首页
 	}
 
 }

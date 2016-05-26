@@ -26,6 +26,9 @@ public class PublishedPageTestCase extends UiAutomatorTestCase {
 	}
 
 	public void testCase() throws UiObjectNotFoundException {
+		// 进入一元抢首页
+		HomePage.fourthNav.clickAndWaitForNewWindow();
+		PublishedPage.awardBtn.click();
 		Vertical.scrollVertical.setAsVerticalList();
 		Vertical.scrollVertical.flingForward();
 		Vertical.scrollVertical.flingBackward();
@@ -64,6 +67,7 @@ public class PublishedPageTestCase extends UiAutomatorTestCase {
 		// 点击获奖信息进入获奖者个人中心
 		PublishedPage.awardMessage.clickAndWaitForNewWindow();
 		assertEquals("个人中心icon是否存在", true, OtherPersonCenter.otherIcon.exists());
+		HomePage.backBtn.click();
 		HomePage.backBtn.click();
 
 	}
