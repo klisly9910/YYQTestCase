@@ -1,5 +1,7 @@
 package com.txh.yyq.homepage;
 
+import com.android.uiautomator.core.UiObject;
+import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 /**
@@ -8,6 +10,8 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
  * @param args
  */
 public class YYQHomePage extends UiAutomatorTestCase {
-	
+	//底部[一元抢]按钮
+	public static UiObject homeRadio = new UiObject(
+			new UiSelector().resourceId("com.mappn.gfan:id/homeRadio"));
 
 }

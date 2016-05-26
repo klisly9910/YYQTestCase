@@ -6,7 +6,7 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
 
 /**
  * 充值记录页面
- * 
+ * 2.2.1版本已去掉【充值记录】模块
  * @author xiaohua
  * 
  */

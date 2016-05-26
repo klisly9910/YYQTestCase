@@ -14,9 +14,9 @@ public class AwardRecords extends UiAutomatorTestCase {
 	// 没有中奖记录
 	public static UiObject emptyGo = new UiObject(
 			new UiSelector().resourceId("com.mappn.gfan:id/award_empty_go"));
-	
 
 	// 有中奖记录
+	
 	
 	//地址管理
 	public static UiObject managerADD = new UiObject(

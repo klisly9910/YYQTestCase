@@ -11,6 +11,9 @@ import com.android.uiautomator.testrunner.UiAutomatorTestCase;
  * 
  */
 public class PublishedPage extends UiAutomatorTestCase {
+	// 底部[揭晓]
+	public static UiObject awardBtn = new UiObject(
+			new UiSelector().resourceId("com.mappn.gfan:id/openAwardRadio"));
 	// 揭晓list属性
 	public static UiObject awardList = new UiObject(
 			new UiSelector()
@@ -22,7 +25,7 @@ public class PublishedPage extends UiAutomatorTestCase {
 	public static UiObject awardName = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_award_item_tv_name"));
-	//获奖者信息
+	// 获奖者信息
 	public static UiObject awardMessage = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_award_item_rl_do_open"));
@@ -51,6 +54,5 @@ public class PublishedPage extends UiAutomatorTestCase {
 	public static UiObject luckyTime = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_award_tv_realtime"));
-	
 
 }
