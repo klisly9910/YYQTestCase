@@ -3,10 +3,12 @@ package com.txh.yyq.gooddetails;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiSelector;
 import com.android.uiautomator.testrunner.UiAutomatorTestCase;
+
 /**
  * 定义[商品详情页]常用字段，包括进行中、已揭晓
+ * 
  * @author xiaohua
- *
+ * 
  */
 public class GoodDetails extends UiAutomatorTestCase {
 	// 商品详情title
@@ -35,7 +37,7 @@ public class GoodDetails extends UiAutomatorTestCase {
 	public static UiObject luckynumber = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_detail_tv_lucky_number"));
-	//计算过程
+	// 已揭晓：计算过程
 	public static UiObject lottery = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_detail_tv_lottery_result"));
@@ -48,6 +50,10 @@ public class GoodDetails extends UiAutomatorTestCase {
 	public static UiObject attendNumbers = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_detaiil_rl_lucky_numbers"));
+	//幸运数字
+	public static UiObject luckyNumb = new UiObject(
+			new UiSelector()
+					.resourceId("com.mappn.gfan:id/gm3_yyq_detail_tv_numbers"));
 	// 往期揭晓
 	public static UiObject past = new UiObject(
 			new UiSelector()
@@ -58,7 +64,7 @@ public class GoodDetails extends UiAutomatorTestCase {
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_detail_rl_gooddesc"));
 
-	// 所有参与记录
+	// 所有参与记录：参与计算时间
 	public static UiObject allattendrecords = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_detail_tv_time"));
@@ -72,6 +78,7 @@ public class GoodDetails extends UiAutomatorTestCase {
 	public static UiObject attenderIP = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_detail_records_item_tv_ip"));
+	//参与人次、时间
 	public static UiObject attenderCountTime = new UiObject(
 			new UiSelector()
 					.resourceId("com.mappn.gfan:id/gm3_yyq_detail_records_item_tv_count"));

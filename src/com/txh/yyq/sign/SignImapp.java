@@ -27,7 +27,7 @@ public class SignImapp extends UiAutomatorTestCase {
 		UnSignPage.etusername.click();
 		UnSignPage.etusername.setText(Utf7ImeHelper.e("imopan507"));
 		UnSignPage.etpsd.click();
-		UnSignPage.etpsd.setText(Utf7ImeHelper.e("654321"));
+		UnSignPage.etpsd.setText(Utf7ImeHelper.e("123456"));
 		UnSignPage.signBtn.clickAndWaitForNewWindow();
 
 	}
